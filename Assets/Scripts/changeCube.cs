@@ -20,7 +20,7 @@ public class changeCube : MonoBehaviour {
 
     void Start()
     {
-        brain = GameObject.Find("GM").GetComponent<Perceptron>(); // LOL RIP SCENE
+        brain = GameObject.Find("GM").GetComponent<Perceptron>();
         x = gameObject.transform.position.x;
         z = gameObject.transform.position.z;
 
@@ -40,7 +40,7 @@ public class changeCube : MonoBehaviour {
 
         int target = label;
 
-        //brain.train(Theinputs, target);    // uncomment to train automagically
+        //brain.train(Theinputs, target);    // uncomment to train automatically
 
         if (trainGuess == target)
         {
@@ -48,8 +48,6 @@ public class changeCube : MonoBehaviour {
             wrongCubeNegRend.material.SetColor("_Color", Color.green);
             wrongCubePosRend.material.SetColor("_Color", Color.green);
             correctCubeNegRend.material.SetColor("_Color", Color.green);
-            //Debug.Log("target: " + target);
-            //Debug.Log("guess: " + trainGuess);
         }
         else
         {
@@ -57,8 +55,6 @@ public class changeCube : MonoBehaviour {
             wrongCubeNegRend.material.SetColor("_Color", Color.red);
             wrongCubePosRend.material.SetColor("_Color", Color.red);
             correctCubeNegRend.material.SetColor("_Color", Color.red);
-            //Debug.Log("target: " + target);
-            //Debug.Log("guess: " + trainGuess);
         }
 
         switch (color)
@@ -108,8 +104,6 @@ public class changeCube : MonoBehaviour {
             wrongCubeNegRend.material.SetColor("_Color", Color.green);
             wrongCubePosRend.material.SetColor("_Color", Color.green);
             correctCubeNegRend.material.SetColor("_Color", Color.green);
-            //Debug.Log("target: " + target);
-            //Debug.Log("guess: " + trainGuess);
         }
         else
         {
@@ -117,8 +111,6 @@ public class changeCube : MonoBehaviour {
             wrongCubeNegRend.material.SetColor("_Color", Color.red);
             wrongCubePosRend.material.SetColor("_Color", Color.red);
             correctCubeNegRend.material.SetColor("_Color", Color.red);
-            //Debug.Log("target: " + target);
-            //Debug.Log("guess: " + trainGuess);
         }
 
 
